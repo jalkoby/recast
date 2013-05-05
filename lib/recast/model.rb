@@ -1,0 +1,2 @@
+module Recast::Model
+end
