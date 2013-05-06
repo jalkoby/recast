@@ -1,8 +1,3 @@
-require 'bundler'
-Bundler.require
-
-module ActiveRecord
-  class Base
-  end
-end
-ActiveSupport.run_load_hooks(:active_record, ActiveRecord::Base)
+require_relative './fixtures/active_record'
+require_relative './../lib/recast'
+require_relative './fixtures/user'

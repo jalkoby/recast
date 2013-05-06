@@ -1,10 +1,13 @@
 require "recast/version"
-require 'active_support/all'
 
 module Recast
-  autoload :Model, 'recast/model'
+  autoload :Model,  'recast/model'
+  autoload :Errors, 'recast/errors'
+  autoload :Utils,  'recast/utils'
 end
 
-ActiveSupport.on_load(:active_record) do
-  include Recast::Model
+if defined?(ActiveRecord)
+  ActiveSupport.on_load(:active_record) do
+    include Recast::Model
+  end
 end
